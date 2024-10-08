@@ -1,0 +1,18 @@
+{
+  "name": "purgomalum-api-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test":"npx playwright test",
+    "test-all-report":"npx playwright test --reporter=html && npx playwright show-report",
+    "test-file-report":"npx playwright test contains-profanity-endpoint.spec.ts --reporter=html && npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4"
+  }
+}
