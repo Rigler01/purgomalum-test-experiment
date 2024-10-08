@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 import { checkContainsProfanity } from '../data/testData.ts';
-import apiMethodNames from '../utils/apiMethodNames.ts';
 import { UrlBuilderProps } from '../interfaces/urlBuilderInterface.ts';
 import { BuildUrl } from '../utils/urlBuilder.ts';
 
@@ -9,7 +8,7 @@ test.describe('Containsprofanity endpoint', () => {
     checkContainsProfanity.forEach(testScenario => {
       
       const urlParams : UrlBuilderProps = {
-        responseType : apiMethodNames.containsprofanity,
+        responseType : "containsprofanity",
         inputText: testScenario.inputText,
       };
   

@@ -4,14 +4,15 @@ import apiMethodNames from '../utils/apiMethodNames.ts';
 import { UrlBuilderProps } from '../interfaces/urlBuilderInterface.ts';
 import { BuildUrl } from '../utils/urlBuilder.ts';
 
-apiMethodNames.forEach(type. => {
-  type = type.toString();
-  test.describe(`Format = ${type}`, () => {
+for (let methodName in apiMethodNames){
+  
+  //type = type.toString();
+  test.describe(`Format = ${apiMethodNames[methodName]}`, () => {
 
     processValidInputs.forEach(testScenario => {
       
       const urlParams : UrlBuilderProps = {
-        responseType : type,
+        responseType : apiMethodNames[methodName],
         inputText: testScenario.inputText,
         fill_text: testScenario.fill_text,
         fill_char: testScenario.fill_char,
@@ -25,7 +26,7 @@ apiMethodNames.forEach(type. => {
         console.log("appendUrl = "+ appendUrl);
         expect(response.status()).toBe(200);
         
-        switch (type) {
+        switch (apiMethodNames[methodName]) {
           case "json":
             const jsonData = await response.json();
             expect(jsonData.result).toBe(testScenario.expected);
@@ -47,7 +48,7 @@ apiMethodNames.forEach(type. => {
       });
     });
   });
-});
+};
   
 
 

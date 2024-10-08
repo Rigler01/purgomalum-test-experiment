@@ -1,6 +1,5 @@
 export default {
-        json:"json",
-        xml:"xml",
-        plain:"plain",
-        containsprofanity: "containsprofanity"
+    json:"json",
+    xml:"xml",
+    plain:"plain",
 }
