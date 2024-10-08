@@ -6,13 +6,12 @@ import { BuildUrl } from '../utils/urlBuilder.ts';
 
 for (let methodName in apiMethodNames){
   
-  //type = type.toString();
   test.describe(`Format = ${apiMethodNames[methodName]}`, () => {
 
     processValidInputs.forEach(testScenario => {
       
       const urlParams : UrlBuilderProps = {
-        responseType : apiMethodNames[methodName],
+        methodName : apiMethodNames[methodName],
         inputText: testScenario.inputText,
         fill_text: testScenario.fill_text,
         fill_char: testScenario.fill_char,

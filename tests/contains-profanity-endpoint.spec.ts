@@ -8,7 +8,7 @@ test.describe('Containsprofanity endpoint', () => {
     checkContainsProfanity.forEach(testScenario => {
       
       const urlParams : UrlBuilderProps = {
-        responseType : "containsprofanity",
+        methodName : "containsprofanity",
         inputText: testScenario.inputText,
       };
   

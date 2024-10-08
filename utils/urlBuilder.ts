@@ -3,7 +3,7 @@ import { UrlBuilderProps } from "../interfaces/urlBuilderInterface";
 export const BuildUrl = (urlData : UrlBuilderProps) : string => {
 
     let formattedUrl : string = "";
-    formattedUrl += urlData.responseType + "?text=" + urlData.inputText + FillTextForUrl(urlData) + FillCharForUrl(urlData) + AddWordsForUrl(urlData)
+    formattedUrl += urlData.methodName + "?text=" + urlData.inputText + FillTextForUrl(urlData) + FillCharForUrl(urlData) + AddWordsForUrl(urlData)
     
     return formattedUrl;
 }
@@ -18,7 +18,7 @@ const FillCharForUrl = (urlData : UrlBuilderProps) : string => {
     return textCharUrl;
 }
 
-const AddWordsForUrl = (urlData : UrlBuilderProps) : string => {//This probably work needs for the list of words 
+const AddWordsForUrl = (urlData : UrlBuilderProps) : string => {
     let addWordsUrl : string = urlData.addWords ? "&add=" + urlData.addWords : "";
     return addWordsUrl;
 }

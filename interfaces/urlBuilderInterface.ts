@@ -1,11 +1,10 @@
 export interface UrlBuilderProps extends BaseParams {
-    responseType: string,
+    methodName: string,
 }
 
 export interface TestParams extends BaseParams{
     name: string,
     expected: string,
-    
 }
 
 export interface BaseParams {
