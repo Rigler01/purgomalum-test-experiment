@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test":"npx playwright test",
-    "test-all-report":"npx playwright test --reporter=html && npx playwright show-report",
-    "test-file-report":"npx playwright test contains-profanity-endpoint.spec.ts --reporter=html && npx playwright show-report"
+    "test-all-and-report":"npx playwright test --reporter=html && npx playwright show-report",
+    "test-file-and-report":"npx playwright test contains-profanity-endpoint.spec.ts --reporter=html && npx playwright show-report"
   },
   "keywords": [],
   "author": "",
